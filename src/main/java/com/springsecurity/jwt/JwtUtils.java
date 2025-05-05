@@ -28,7 +28,7 @@ public class JwtUtils {
         key = Keys.hmacShaKeyFor(secretKey.getBytes());
     }
 
-    private String getJwtFromHeader(HttpServletRequest request) {
+    public String getJwtFromHeader(HttpServletRequest request) {
         String headerAuth = request.getHeader("Authorization");
 
         if (headerAuth != null && headerAuth.startsWith("Bearer ")) {
