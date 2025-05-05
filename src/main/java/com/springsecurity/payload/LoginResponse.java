@@ -7,6 +7,12 @@ public class LoginResponse {
     private String username;
     private List<String> role;
 
+    public LoginResponse(String username, List<String> roles, String jwtToken) {
+        this.username = username;
+        this.role = roles;
+        this.jwt = jwtToken;
+    }
+
     public String getJwt() {
         return jwt;
     }
